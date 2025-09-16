@@ -1,0 +1,112 @@
+BASE DE DATOS
+- ALMACENAR INFORMACION DEL CLIENTE
+ - Aquí tienes una lista de requerimientos, basada en la información proporcionada previamente sobre la consultora contable "Contanilipro". Esta lista está estructurada para un análisis de requerimientos.
+
+Lista de Requerimientos para el Sistema Web "Contanilipro"
+Proyecto: Desarrollo de un Sistema Web para la Consultora Contable "Contanilipro"
+
+Fecha: 10 de Junio de 2025
+
+I. Requerimientos Funcionales (RF)
+RF1: Gestión de Clientes
+
+RF1.1: El sistema debe permitir el registro de nuevos clientes, incluyendo campos para:
+Nombre/Razón Social
+RUC/NIT
+Dirección
+Teléfono(s) de Contacto
+Correo Electrónico
+Persona de Contacto (si aplica)
+RF1.2: El sistema debe permitir la edición de la información de clientes existentes.
+RF1.3: El sistema debe permitir la búsqueda y filtrado de clientes por:
+Nombre/Razón Social
+RUC/NIT
+Estado (activo/inactivo)
+RF1.4: El sistema debe permitir la visualización de un historial de servicios contratados por cada cliente.
+RF2: Gestión de Servicios
+
+RF2.1: El sistema debe permitir el registro de los tipos de servicios que ofrece Contanilipro (ej. Auditorías, Declaraciones de Impuestos, Contabilidad General, Asesoría Financiera, etc.).
+RF2.2: Para cada servicio, el sistema debe permitir detallar:
+Nombre del Servicio
+Descripción detallada
+Costo/Precio Estimado (moneda: Bolivianos - BOB)
+RF2.3: El sistema debe permitir la actualización de la información de los servicios existentes.
+RF2.4: El sistema debe permitir la asociación de uno o más servicios a un cliente específico.
+RF3: Gestión de Proyectos/Casos (Servicios Activos)
+
+RF3.1: El sistema debe permitir la creación de un nuevo proyecto o caso asociado a un cliente para un servicio contratado.
+RF3.2: Para cada proyecto, el sistema debe permitir asignar:
+Cliente Asociado
+Servicio Contratado
+Responsable/Equipo de Trabajo (interno de Contanilipro)
+Fechas de Inicio y Fin Estimadas
+Estado del Proyecto (ej. Pendiente, En Progreso, Completado, Cancelado, En Espera de Cliente)
+RF3.3: El sistema debe permitir registrar hitos y avances dentro de cada proyecto.
+RF3.4: El sistema debe permitir la actualización del estado y los detalles de un proyecto.
+RF4: Generación de Informes y Documentos
+
+RF4.1: El sistema debe generar informes de clientes:
+Listado de clientes activos/inactivos.
+Clientes por tipo de servicio contratado.
+RF4.2: El sistema debe generar informes de servicios:
+Servicios más/menos demandados.
+Ingresos generados por tipo de servicio (si se gestionan pagos).
+RF4.3: El sistema debe generar informes del estado de los proyectos (ej. proyectos en progreso, proyectos próximos a vencer).
+RF4.4: El sistema debe permitir la generación de proformas y/o facturas simples de servicios para los clientes (requerirá definir campos para facturación).
+RF5: Módulo de Contacto y Solicitud de Información (Página Pública)
+
+RF5.1: La página web pública debe incluir un formulario de contacto para que los visitantes puedan enviar consultas.
+RF5.2: El formulario de contacto debe capturar: Nombre, Correo Electrónico, Teléfono (opcional), Mensaje.
+RF5.3: Las solicitudes enviadas a través del formulario deben ser almacenadas en el sistema.
+RF5.4: El sistema debe notificar al administrador o personal designado sobre nuevas solicitudes de contacto.
+RF6: Gestión de Usuarios y Roles
+
+RF6.1: El sistema debe permitir el registro y gestión de usuarios internos (empleados de Contanilipro).
+RF6.2: El sistema debe implementar un sistema de roles con diferentes niveles de acceso y permisos:
+Administrador: Acceso completo a todas las funcionalidades del sistema (gestión de usuarios, clientes, servicios, proyectos, informes, configuración).
+Contador/Analista: Acceso a la gestión de sus clientes y proyectos asignados, registro de avances.
+Personal de Apoyo: Acceso limitado a información de clientes y proyectos básicos, sin capacidad de edición crítica.
+RF6.3: El sistema debe requerir un proceso de inicio de sesión seguro (nombre de usuario y contraseña).
+RF6.4: El sistema debe ofrecer una funcionalidad de recuperación de contraseña para usuarios internos.
+RF7: Gestión de Contenido de la Página Pública
+
+RF7.1: El sistema debe permitir al administrador gestionar el contenido estático de las secciones públicas de la página web (ej. "Quiénes Somos", "Nuestros Servicios", "Contacto", "Novedades/Blog").
+RF7.2: El sistema debe permitir la carga y gestión de imágenes y documentos (ej. logos, brochures, artículos en PDF) para ser usados en la página pública.
+II. Requerimientos No Funcionales (RNF)
+RNF1: Rendimiento
+
+RNF1.1: El tiempo de carga de las páginas y la ejecución de operaciones principales (ej. búsqueda de clientes, carga de informes) no debe exceder los 3 segundos para el 90% de los casos.
+RNF1.2: El sistema debe ser capaz de soportar al menos 50 usuarios concurrentes sin degradación significativa del rendimiento.
+RNF2: Seguridad
+
+RNF2.1: Los datos sensibles de clientes y la información financiera deben ser cifrados tanto en tránsito como en reposo.
+RNF2.2: El sistema debe implementar medidas de seguridad contra vulnerabilidades comunes como SQL Injection y Cross-Site Scripting (XSS).
+RNF2.3: Se debe implementar un sistema de copias de seguridad de la base de datos de forma automática y periódica (diaria).
+RNF2.4: El sistema debe registrar un log de auditoría para los accesos y las acciones críticas realizadas por los usuarios internos.
+RNF3: Usabilidad
+
+RNF3.1: La interfaz de usuario debe ser intuitiva, fácil de aprender y de usar para el personal de Contanilipro, incluso para usuarios con conocimientos técnicos limitados.
+RNF3.2: La navegación dentro del sistema debe ser consistente y clara.
+RNF3.3: El diseño de la interfaz (tanto para la parte pública como para la interna) debe ser responsive, adaptándose a diferentes dispositivos y tamaños de pantalla (escritorio, tablet, móvil).
+RNF4: Fiabilidad
+
+RNF4.1: El sistema debe garantizar una disponibilidad del 99% del tiempo durante las horas laborales.
+RNF4.2: El sistema debe manejar los errores de forma elegante, mostrando mensajes de error claros y útiles al usuario, en lugar de fallas abruptas.
+RNF5: Mantenibilidad
+
+RNF5.1: El código fuente del sistema debe estar bien estructurado, documentado y seguir buenas prácticas de programación para facilitar su mantenimiento y futuras modificaciones.
+RNF5.2: El sistema debe ser modular, permitiendo agregar nuevas funcionalidades o modificar las existentes con el mínimo impacto en otras partes del sistema.
+RNF6: Escalabilidad
+
+RNF6.1: La arquitectura del sistema debe permitir manejar un crecimiento futuro en el volumen de clientes, servicios y proyectos sin requerir un rediseño completo.
+RNF7: Compatibilidad
+
+RNF7.1: El sistema debe ser compatible con las últimas versiones de los navegadores web principales (Google Chrome, Mozilla Firefox, Microsoft Edge, Safari).
+RNF7.2: Si Contanilipro utiliza algún software contable o de facturación específico, el sistema debe ser compatible o tener la capacidad de integrarse con él (este punto requiere confirmación).
+III. Consideraciones Adicionales y Restricciones
+Tecnología Preferida: (Debe definirse: Ej. PHP/Laravel, Python/Django, Node.js/Express, React/Angular/Vue.js para el frontend).
+Base de Datos: (Debe definirse: Ej. MySQL, PostgreSQL, MongoDB).
+Ambiente de Despliegue: (Debe definirse: Ej. Servidor propio, hosting compartido, proveedor de la nube - AWS, Google Cloud, Azure).
+Idioma: El idioma principal del sistema será el español.
+Moneda: La moneda de referencia para costos y precios será el Boliviano (BOB).
+Esta lista te servirá como un buen punto de partida para tus reuniones y entrevistas con los stakeholders de Contanilipro. ¡Mucha suerte con tu análisis de requerimientos!
