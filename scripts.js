@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     // --- FORMULARIO CONTACTO ---
-    const contactoForm = document.querySelector('main section form'); // Ajusta si tienes más de un form en la página
+    const contactoForm = document.querySelector('main section form'); 
 
-    if (contactoForm && document.getElementById('nombre')) { // Verifica que sea el formulario de contacto
+    if (contactoForm && document.getElementById('nombre')) { 
         contactoForm.addEventListener('submit', function (e) {
             e.preventDefault();
 
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 mensaje: document.getElementById('mensaje').value
             };
 
-            // Generar ID único
+
             const formId = `contacto_${new Date().getTime()}`;
             localStorage.setItem(formId, JSON.stringify(formData));
 
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // --- OPCIONAL: Función para mostrar todos los formularios guardados ---
+    // --- Función para mostrar todos los formularios guardados ---
     function mostrarFormularios() {
         const container = document.getElementById('storedFormsContainer'); // Crear un div con este ID en tu HTML si quieres mostrar
         if (!container) return;
