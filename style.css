@@ -121,8 +121,3 @@ img{
   transform: translateY(-3px);
   color: #fff;
 }
-@media (max-width: 768px) {
-  .img-backgroundask {
-    padding-bottom: 8rem;
-  }
-}
